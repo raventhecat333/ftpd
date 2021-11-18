@@ -1,6 +1,6 @@
 # ftpd
 
-FTP Server for 3DS/Switch/Linux.
+FTP Server for 3DS/Linux.
 
 ## Features
 
@@ -8,11 +8,11 @@ FTP Server for 3DS/Switch/Linux.
 - Supports multiple simultaneous clients. The 3DS itself only appears to support enough sockets to perform 4-5 simultaneous data transfers, so it will help if you limit your FTP client to this many parallel requests.
 - Cutting-edge [graphics](#dear-imgui).
 
-- Exit on NDS/3DS with START button
-- Exit on Switch with PLUS button
+- Exit on 3DS with START button
 
-- Toggle backlight on NDS/3DS with SELECT button
-- Toggle backlight on Switch with MINUS button
+
+- Toggle backlight on 3DS with SELECT button
+
 
 - Emulation of a /dev/zero (/devZero) device for network performance testing
   - Example retrieve `curl ftp://192.168.1.115:5000/devZero -o /dev/zero`
@@ -44,46 +44,31 @@ Standard Dear ImGui controller inputs are supported.
 
 ## Latest Builds
 
-NDS: https://mtheall.com/~mtheall/ftpd.nds
+CIA: https://github.com/raventhecat333/ftpd/releases/latest/ftpd.cia
 
-CIA: https://mtheall.com/~mtheall/ftpd.cia
+3DSX: https://github.com/raventhecat333/ftpd/releases/latest/ftpd.3dsx
 
-3DSX: https://mtheall.com/~mtheall/ftpd.3dsx
-
-NRO: https://mtheall.com/~mtheall/ftpd.nro
 
 CIA QR Code
 
-![ftpd.cia](https://github.com/mtheall/ftpd/raw/master/ftpd-qr.png)
+![ftpd.cia](https://github.com/raventhecat333/ftpd/raw/master/ftpd-qr.png)
 
-## Classic Builds
+## Classic Builds WARNING THESE WILL LIKELY BE DEPRICATED
 
 Classic builds use a console instead of Dear ImGui.
 
-CIA: https://mtheall.com/~mtheall/ftpd-classic.cia
+CIA: https://github.com/raventhecat333/ftpd/releases/latest/ftpd-classic.cia
 
-3DSX: https://mtheall.com/~mtheall/ftpd-classic.3dsx
-
-NRO: https://mtheall.com/~mtheall/ftpd-classic.nro
+3DSX: https://github.com/raventhecat333/ftpd/releases/latest/ftpd-classic.3dsx
 
 CIA QR Code
 
-![ftpd-classic.cia](https://github.com/mtheall/ftpd/raw/master/ftpd-classic-qr.png)
+![ftpd-classic.cia](https://github.com/raventhecat333/ftpd/raw/master/ftpd-classic-qr.png)
 
 ## Build and install
 
 You must set up the [development environment](https://devkitpro.org/wiki/Getting_Started).
 
-### NDS
-
-The following pacman packages are required to build `nds/ftpd.nds`:
-
-	devkitARM
-	dswifi
-	libfat-nds
-	libnds
-
-They are available as part of the `nds-dev` meta-package.
 
 ### 3DSX
 
@@ -98,21 +83,6 @@ They are available as part of the `3ds-dev` meta-package.
 Build `3ds/ftpd.3dsx`:
 
     make 3dsx
-
-### NRO
-
-The following pacman packages are required to build `switch/ftpd.nro`:
-
-    devkitA64
-    libnx
-    switch-tools
-    switch-libzstd
-
-The first three are available as part of the `switch-dev` meta-package. Additionally, ImageMagick is required for converting assets.
-
-Build `switch/ftpd.nro`:
-
-    make nro
 
 ## Supported Commands
 
@@ -157,9 +127,8 @@ Build `switch/ftpd.nro`:
 - XPWD
 - XRMD
 
-## Planned Commands
-
-- STOU
+## Planned Things
+- poking at 
 
 ## SITE commands
 
